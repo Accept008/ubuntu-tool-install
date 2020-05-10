@@ -211,8 +211,33 @@
 ![image](./redis-view.png)   
     	
 ## 11.mysql可视化安装
-    sudo apt-get install mysql-workbench
-
+    a.workbench
+        sudo apt-get install mysql-workbench
+    b.navicat安装
+        下载：
+            链接: https://pan.baidu.com/s/1BgLpsNIpxt9Qa1msTWMI4g 提取码: vpsa
+        配置:
+            解压,复制解压文件到指定文件夹cmd
+                cp ./navicat120_premium_cs_x64 /usr/local/tool/ -r
+            创建桌面快捷方式cmd
+                cd /usr/share/applications
+                sudo gedit navicat.desktop
+                   navicat.desktop内容:
+                     [Desktop Entry]
+                     Encoding=UTF-8
+                     Name=navicat
+                     Comment=The Smarter Way to manage dadabase
+                     Exec=/usr/local/tool/navicat120_premium_cs_x64/start_navicat
+                     Icon=/usr/local/tool/navicat120_premium_cs_x64/navicat-icon.png
+                     Categories=Application;Database;MySQL;navicat
+                     Version=1.0
+                     Type=Application
+                     Terminal=0   
+            图标下载到navicat120_premium_cs_x64文件夹并重命名cmd
+                wget http://www.navicat.com.cn/images/02.Product_00_AllProducts_Premium_large.png -O navicat-icon.png
+        启动:
+            首次启动提示mono和gecko安装,不安装也可以运行navicat.选择取消即可
+   ![image](img/navicat-start-note.png)                  
 ## 12.安装mysql
     采用Docker方式安装
     docker pull mysql:5.7.29
